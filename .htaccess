@@ -1,0 +1,21 @@
+# Yönlendirmeleri aktif eder
+RewriteEngine on
+ 
+# Yeni bir yönlendirme kuralı ekliyoruz
+RewriteRule ^([0-9]+)/([0-9a-zA-Z-_]+)\.html$  home/haber-oku.php?sef=$2&id=$1 [L,QSA]
+RewriteRule ^haberler$  home/haberler.php [L,QSA]
+RewriteRule ^$  home/index.php [L,QSA]
+RewriteRule ^ana-sayfa$  home/index.php [L,QSA]
+RewriteRule ^js/jquery.js$  dj-kabini/js/jquery.js [L,QSA]
+RewriteRule ^etiket/([0-9a-zA-Z-_]+)$  home/etiket.php?seoetiket=$1 [L,QSA]
+RewriteRule ^yazar/([0-9a-zA-Z-_]+)$  home/yazar.php?seoyazar=$1 [L,QSA]
+RewriteRule ^kategori/([0-9a-zA-Z-_]+)$  home/kategori.php?seokategori=$1 [L,QSA]
+RewriteRule ^arama/kelime/?([0-9a-zA-Z-_]+)$  home/arama.php?seobaslik=$1 [L,QSA]
+RewriteRule ^upload/haber/(.*)$  dj-kabini/upload/haber/$1 [L,QSA]
+RewriteRule ^upload/haber/thumb/(.*)$  dj-kabini/upload/haber/thumb/$1 [L,QSA]
+RewriteRule ^upload/haber/anasayfa/(.*)$  dj-kabini/upload/haber/anasayfa/$1 [L,QSA]
+RewriteRule ^upload/profil-resmi/(.*)$  dj-kabini/upload/profil-resmi//$1 [L,QSA]
+RewriteRule ^upload/profil-resmi/thumb/(.*)$  dj-kabini/upload/profil-resmi/thumb/$1 [L,QSA]
+RewriteRule ^upload/top10/thumb/(.*)$  dj-kabini/upload/top10/thumb/$1 [L,QSA]
+RewriteRule ^upload/top10/(.*)$  dj-kabini/upload/top10/$1 [L,QSA]
+RewriteRule ^upload/logo/(.*)$  dj-kabini/upload/logo/$1 [L,QSA]
